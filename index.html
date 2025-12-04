@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Great Britain Fatal Road Collisions 1999 - 2024 | InfoViz A3</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <h1 class="responsive-svg-container" style="text-align:center">
+    Great Britain Fatal Road Collisions 1999 - 2024
+  </h1>
+
+  <div class="tab-container">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="tab-viz">Visualization</button>
+      <button class="tab-btn" data-tab="tab-text">Description</button>
+    </div>
+
+    <div id="tab-viz" class="tab-content active">
+      <div id="bar" class="responsive-svg-container"></div>
+      <div id="line" class="responsive-svg-container"></div>
+    </div>
+
+    <div id="tab-text" class="tab-content">
+      <h2>About this visualization</h2>
+
+      <p>The visualization represents a comprehensive view of fatal road collisions across Great Britain (GB) from 1999 to 2024.</p>
+
+      <p>The map on the left side shows the geographical distribution of fatal accidents for the selected year, each red point represents and individual collision. This allows users to identify regional concentration patterns of the collisions across GB, such as clusters around major urban areas, highways or high-traffic locations.</p>
+
+      <p>The top right line chart illustrates how the total number of fatal collisions has changed over the time. The long-term decreasing trend highlights improvements in road safety, vehicle technology and enforcement during last 25 years, while short-term flactuations may reflect policy changes, weather patterns or socio-economic factors.</p>
+
+      <p>The bottom right bar chart shows the hourly distribution of fatalities within the selected year. Clear peaks duting late afternoon and early evening hours correspond to rush-hour traffic and increased road activity.</p>
+
+      <p>Together, these three views allow users to explore temporal, spatial and behavioural dimensions of the GB road-safety data, helping to uncover trends, identify risks and support data-driven decision making.</p>
+
+      <p>Additionally, interactivity was implemented: by clicking the “Play” button, the data automatically progresses through the entire period from 1999 to 2024. By clicking the “Pause” button, the animation stops, allowing the user to analyze the selected year.</p>
+
+      <h3>Data preprocessing</h3>
+      <p>
+        The underlying data originate from the UK Department for Transport road casualty statistics and were preprocessed in Python using the <code>pandas</code> library. Starting from the raw file, the dataset was foltered to collisions from 1999 to 2024 and to records classified as fatal. For the visualization only the variables <code>collision_year</code>, <code>longitude</code>, <code>latitude</code>, <code>date</code> and <code>time</code> were retained, the column <code>collision_year</code> was renamed to <code>year</code> and rows with missing geographic coordinates were removed. The resulting cleaned table was then exported as .csv file and used as the input dataset for the D3-based "Great Britain Fatal Road Collisions 1999 - 2024" visualization.
+      </p>
+
+      <div class="meta-section">
+        <h3>Author and project links</h3>
+        <p>
+          This project was created by
+          <a href="https://www.linkedin.com/in/valentintian" target="_blank" rel="noopener noreferrer">
+            Valentin Tian
+          </a>
+          as part of the Master&apos;s programme in Data Science at TU Wien (course 193.187 Information Visualization, winter semester 2025).
+        </p>
+        <ul>
+          <li>
+            Source code repository:
+            <a href="https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3" target="_blank" rel="noopener noreferrer">
+              github.com/valentintian/tuw-ds-ws2025-infoviz-a3-d3
+            </a>
+          </li>
+        </ul>
+
+        <h3>Data sources</h3>
+        <ul>
+          <li>
+            Great Britain road safety open data, provided by the UK Department for Transport:
+            <a href="https://www.gov.uk/government/statistical-data-sets/road-safety-open-data" target="_blank" rel="noopener noreferrer">
+              gov.uk/government/statistical-data-sets/road-safety-open-data
+            </a>
+          </li>
+          <li>
+            Administrative boundaries for the United Kingdom, ONS TopoJSON boundaries datasets:
+            <a href="https://github.com/ONSvisual/topojson_boundaries/blob/master/geogGBregion.json?short_path=6bd9372" target="_blank" rel="noopener noreferrer">
+              topojson-boundaries
+            </a>
+          </li>
+        </ul>
+
+        <h3>Code and design inspiration</h3>
+        <p>
+          Parts of the map projection, responsive SVG layout and interaction patterns are adapted and extended from public D3 example and documentation from
+          <a href="https://observablehq.com/@d3/walmarts-growth" target="_blank" rel="noopener noreferrer">“Walmart`s Growth” by Mike Bostock</a>.
+          The referenced example served as a conceptual template for understanding geographic rendering workflows and map points plotting techniques.
+          All incorporated ideas were carefully reviewed, restructured and extended to fit the specific analytical goals and dataset used in this assignment.
+        </p>
+
+        <p>
+          The visualization uses
+          <a href="https://d3js.org" target="_blank" rel="noopener noreferrer">D3.js</a>
+          for data binding and drawing and
+          <a href="https://github.com/topojson/topojson-client" target="_blank" rel="noopener noreferrer">
+            topojson-client
+          </a>
+          for handling geographic boundary data.
+        </p>
+
+        <h3>Use of AI assistance</h3>
+        <p>
+          ChatGPT 5.1 (OpenAI) was used as a supplementary tool to support debugging of JavaScript code, refinement of CSS styling and optimization of the HTML layout. 
+          All AI-generated suggestions were reviewed, validated and manually adapted to ensure technical correctness and compliance with academic integrity requirements.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+  <p>
+    © 2025 Valentin Tian. Created as part of the course 193.187 Information Visualization (TU Wien).
+  </p>
+  <p>
+    Data sources: UK Department for Transport (Open Data) and ONS TopoJSON boundaries dataset.  
+    Source code: 
+    <a href="https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3" target="_blank" rel="noopener noreferrer">GitHub Repository</a>.
+  </p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".tab-btn");
+      const tabs = document.querySelectorAll(".tab-content");
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const targetId = btn.getAttribute("data-tab");
+
+          tabs.forEach(tab => tab.classList.remove("active"));
+          const targetTab = document.getElementById(targetId);
+          if (targetTab) {
+            targetTab.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
+
+  <script src="./d3.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
