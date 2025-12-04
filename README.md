@@ -30,7 +30,7 @@ This project was created by **[Valentin Tian](https://www.linkedin.com/in/valent
   https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3
 
 - Demonstration page:
-  https://valentin-tian.github.io/tuw-ds-ws2025-infoviz-a3-d3/
+  https://valentin-tian.github.io/tuw-ds-ws2025-infoviz-a3-d3
 
 ---
 
