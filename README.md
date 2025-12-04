@@ -24,9 +24,7 @@ The underlying data originate from the UK Department for Transport road casualty
 
 ## Author and project links
 
-This project was created by  
-**[Valentin Tian](https://www.linkedin.com/in/valentintian)**  
-as part of the Master's programme in Data Science at TU Wien (course 193.187 Information Visualization, winter semester 2025).
+This project was created by **[Valentin Tian](https://www.linkedin.com/in/valentintian)** as part of the Master's programme in Data Science at TU Wien (course 193.187 Information Visualization, winter semester 2025).
 
 - Source code repository:  
   https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3
@@ -45,9 +43,7 @@ as part of the Master's programme in Data Science at TU Wien (course 193.187 Inf
 
 ## Code and design inspiration
 
-Parts of the map projection, responsive SVG layout and interaction patterns are adapted and extended from a public D3 example and documentation from  
-**“Walmart`s Growth” by Mike Bostock**:  
-https://observablehq.com/@d3/walmarts-growth
+Parts of the map projection, responsive SVG layout and interaction patterns are adapted and extended from a public D3 example and documentation from **“Walmart`s Growth” by Mike Bostock**: https://observablehq.com/@d3/walmarts-growth
 
 The referenced example served as a conceptual template for understanding geographic rendering workflows and map points plotting techniques. All incorporated ideas were carefully reviewed, restructured and extended to fit the specific analytical goals and dataset used in this assignment.
 
