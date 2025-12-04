@@ -27,7 +27,7 @@ The underlying data originate from the UK Department for Transport road casualty
 This project was created by **[Valentin Tian](https://www.linkedin.com/in/valentintian)** as part of the Master's programme in Data Science at TU Wien (course 193.187 Information Visualization, winter semester 2025).
 
 - Demonstration page:  
-  https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3
+  https://valentin-tian.github.io/tuw-ds-ws2025-infoviz-a3-d3
 
 - Source code repository:  
   https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3
