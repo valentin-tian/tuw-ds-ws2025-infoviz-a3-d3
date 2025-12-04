@@ -2,7 +2,7 @@
 
 ## Visualization
 
-The visualization (https://valentin-tian.github.io/tuw-ds-ws2025-infoviz-a3-d3/) represents a comprehensive view of fatal road collisions across Great Britain (GB) from 1999 to 2024.
+The visualization represents a comprehensive view of fatal road collisions across Great Britain (GB) from 1999 to 2024.
 
 The map on the left side shows the geographical distribution of fatal accidents for the selected year, each red point represents an individual collision. This allows users to identify regional concentration patterns of the collisions across GB, such as clusters around major urban areas, highways or high-traffic locations.
 
@@ -28,6 +28,9 @@ This project was created by **[Valentin Tian](https://www.linkedin.com/in/valent
 
 - Source code repository:  
   https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3
+
+- Demonstration page:
+  https://valentin-tian.github.io/tuw-ds-ws2025-infoviz-a3-d3/
 
 ---
 
