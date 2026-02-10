@@ -1,5 +1,17 @@
 # Great Britain Fatal Road Collisions 1999 - 2024
 
+## Author and project links
+
+This project was created by **[Valentin Tian](https://www.linkedin.com/in/valentintian)** as part of the Master's programme in Data Science at TU Wien (course 193.187 Information Visualization, winter semester 2025).
+
+- Demonstration page:  
+  https://valentin-tian.github.io/tuw-ds-ws2025-infoviz-a3-d3
+
+- Source code repository:  
+  https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3
+
+---
+
 ## Visualization
 
 The visualization represents a comprehensive view of fatal road collisions across Great Britain (GB) from 1999 to 2024.
@@ -19,18 +31,6 @@ Additionally, interactivity was implemented: by clicking the “Play” button, 
 ## Data preprocessing
 
 The underlying data originate from the UK Department for Transport road casualty statistics and were preprocessed in Python using the `pandas` library. Starting from the raw file, the dataset was filtered to collisions from 1999 to 2024 and to records classified as fatal. For the visualization only the variables `collision_year`, `longitude`, `latitude`, `date` and `time` were retained, the column `collision_year` was renamed to `year` and rows with missing geographic coordinates were removed. The resulting cleaned table was then exported as a `.csv` file and used as the input dataset for the D3-based “Great Britain Fatal Road Collisions 1999 - 2024” visualization.
-
----
-
-## Author and project links
-
-This project was created by **[Valentin Tian](https://www.linkedin.com/in/valentintian)** as part of the Master's programme in Data Science at TU Wien (course 193.187 Information Visualization, winter semester 2025).
-
-- Demonstration page:  
-  https://valentin-tian.github.io/tuw-ds-ws2025-infoviz-a3-d3
-
-- Source code repository:  
-  https://github.com/valentin-tian/tuw-ds-ws2025-infoviz-a3-d3
 
 ---
 
